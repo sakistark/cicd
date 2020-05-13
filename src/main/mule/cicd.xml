@@ -9,6 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="cicdFlow" doc:id="ae2c8432-9d2d-439b-b84f-52bb579995e8" >
 		<http:listener doc:name="Listener" doc:id="8907d236-2847-4ac3-b633-1dc2491758b2" config-ref="HTTP_Listener_config" path="/cicd"/>
+		<logger level="INFO" doc:name="Logger" doc:id="956375a6-3873-46bf-a7c0-33090dbac2f9" message="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Hi&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;"/>
 		<set-payload value="*********************************************Hi Corona************************************************************************************" doc:name="Set Payload" doc:id="b55b4617-247a-488a-b74a-ba5022c420e3" />
 		<logger level="INFO" doc:name="Logger" doc:id="754eb296-9e4c-40be-a329-1959bf2c2c9f" message="#[payload]"/>
 	</flow>
